@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu Light', sans-serif;
+  margin: 10px;
+  padding: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  background-color: yellow;
+  height: 30px; 
+  width: 200px; 
+  border-radius: 5px;
+  text-align: center; 
+  font-size: 18px;
+}
+
+button {
+  background-color: yellow;
+  font-size: 24px;
+  height: 2em;
+  width: 10em;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 40px;
+}

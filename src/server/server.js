@@ -1,17 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
+
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-app.get('/script.js', (req, res) => res.sendFile(path.join(__dirname, 'script.js')));
+app.get('/bananastand', (req, res) => res.sendFile(path.join(__dirname, '../client/bananastand.png')));
 
 
 app.post('/getBudget', getBudget, (req, res) => res.json(res.locals.cost));
 
-app.listen(3000, () => console.log('listening on 3000 Currency...'));
+app.listen(3001, () => console.log('listening on 3001 Currency...'));
 
 // middleware to get budget
 function getBudget(req, res, next) {
